@@ -1,0 +1,21 @@
+/* Google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Poppins:wght@400;500;600&family=Prata&family=Raleway:wght@500;600;800&display=swap');
+
+/*Variables CSS*/
+:root {
+    --black: #181818;
+    --dark-gray: #2f2f2f;
+    --light-gray: #aeaeae;
+    --white: #f1f1f1;
+    --red: #af0000;
+    --hover-red: #690000;
+    --font: font-family: 'Raleway', sans-serif;
+}
+
+/* Reset CSS*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: var(--font);
+}

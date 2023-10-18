@@ -27,7 +27,7 @@ body {
     height: 100vh;
     display: flex;
     justify-content: center;
-    background-color: var(--black);
+    background-color: var(--dark-gray);
 }
 /*Main*/
 .movies-app {

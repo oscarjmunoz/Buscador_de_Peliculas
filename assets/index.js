@@ -1,5 +1,5 @@
 const apiKey = "4d926d8a";
-const apiUrl = `http://www.omdbapi.com/`;
+const apiUrl = `https://www.omdbapi.com/`;
 ;
 
 //obtenemos el elemento del boton de busqueda a traves del id
@@ -14,19 +14,18 @@ async function searchMovies() {
   const searchTerm = document.getElementById("inputsearch").value;
 
   //obtenemos la lista de las peliculas para mostrar los resultados
-  const movieList = document.getElementById("movieList");
+    const movieList = document.getElementById("movieList");
   movieList.innerHTML = ""; // limpiamos el contenido previo
 
-  try {
-    const Response = await fetch (`${apiUrl}?apiKey=${apiKey}&s=${searchTerm}`);
-    const data = await Response.json(); //convertimos la respuesta de la API a formato JSON
+    try {
+    const response = await fetch (`${apiUrl}?apiKey=${apiKey}&s=${searchTerm}`);
+    const data = await response.json(); //convertimos la respuesta de la API a formato JSON
 
     if (data.Response === "True") {
       //iteramos los resultados y crearemos los respectivos elementos HTML para mostrar las peliculas
-      data.Search.forEach(async (movie) => {
+        data.Search.forEach(async (movie) => {
         //realizaremos una peticion a la API para obtener la informacion de la pelicula
-        const movieDetailResponse = await fetch(
-          `${apiUrl}?apiKey=${apiKey}&i=${movie.imdbID}`
+        const movieDetailResponse = await fetch(`${apiUrl}?apiKey=${apiKey}&i=${movie.imdbID}`
         );
         const movieDetailsData = await movieDetailResponse.json();
 

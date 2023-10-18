@@ -18,8 +18,8 @@ async function searchMovies() {
   movieList.innerHTML = ""; // limpiamos el contenido previo
 
   try {
-    const response = await fetch(`${apiUrl}?apiKey=${apiKey}&s=${searchTerm}`);
-    const data = await response.json(); //convertimos la respuesta de la API a formato JSON
+    const Response = await fetch (`${apiUrl}?apiKey=${apiKey}&s=${searchTerm}`);
+    const data = await Response.json(); //convertimos la respuesta de la API a formato JSON
 
     if (data.Response === "True") {
       //iteramos los resultados y crearemos los respectivos elementos HTML para mostrar las peliculas
